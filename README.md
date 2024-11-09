@@ -22,3 +22,7 @@ Start the application:
 
 > [!CAUTION]
 > **Yarn and pnpm are not supported and they are not tested.** We do not support package managers other than `npm`. Please consider using npm.
+
+## Adding pages
+
+Actually disabled. You can see the list of pages on https://github.com/gorciu-official/Brooklen.
