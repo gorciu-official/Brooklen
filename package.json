@@ -1,3 +1,11 @@
 {
-    
+    "name": "brooklen",
+    "description": "Brooklen is an open-source alternative to World Wide Web created by Gorciu, which takes care about privacy",
+    "version": "1.0.0",
+    "author": {
+        "name": "Gorciu",
+        "url": "https://github.com/gorciu-official"
+    },
+    "homepage": "https://github.com/gorciu-official/Brooklen/",
+    "private": "true"
 }
