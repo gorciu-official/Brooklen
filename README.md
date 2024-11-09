@@ -25,4 +25,4 @@ Start the application:
 
 ## Adding pages
 
-Actually disabled. You can see the list of pages on https://github.com/gorciu-official/Brooklen.
+Actually disabled. You can see the list of pages on https://github.com/gorciu-official/BrooklenIndex.
