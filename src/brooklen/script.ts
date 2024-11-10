@@ -5,7 +5,7 @@
  * (c) 2024 Gorciu
  */
 
-function main() {
+async function main() {
     var element_state_loading = document.querySelector('.load-state');
     if (!element_state_loading) { return; }
 
@@ -19,15 +19,18 @@ function main() {
 
     document.title = 'Brooklen - connecting (50% - checking repository)';
     element_state_loading.textContent = '50% - checking repository';
-    var is_ok : boolean = false;
-    fetch('https://raw.githubusercontent.com/gorciu-official/BrooklenIndex/refs/heads/main/list.json').then((fetched) => {
-        is_ok = fetched.ok;
-    })
-    if (!is_ok) {
+    var load_fetched = await fetch('https://raw.githubusercontent.com/gorciu-official/BrooklenIndex/refs/heads/main/list.json');
+    if (!load_fetched.ok) {
         document.title = 'Brooklen - connecting canceled';
         element_state_loading.textContent = 'canceled; detected that Brooklen is blocked';
         return;
     }
+
+    document.title = 'Brooklen';
+    element_state_loading.classList.add('hidden');
+    var element_browser = document.querySelector('browser');
+    if (!element_browser) { return; }
+    element_browser.classList.remove('hidden');
 }
 
 document.addEventListener('DOMContentLoaded', main);
