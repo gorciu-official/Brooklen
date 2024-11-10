@@ -10,8 +10,11 @@ import { app, BrowserWindow } from 'electron';
 function createWindow() : void {
     let bw = new BrowserWindow({
         minWidth: 1000,
-        minHeight: 750
+        minHeight: 750,
+        frame: false
     });
+    bw.menuBarVisible = false;
+    bw.loadFile('src/brooklen/index.html');
 }
 
 app.whenReady().then(createWindow);
